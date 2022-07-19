@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
+
+:root {
+  --color-bg: #EEE0CB;
+  --color-text: #280003;
+  --color-hover: #4E586E;
+
+  --color-hovertest: #BAA898;
+
+  --color-bg2: #f88f70;
+
+  --color-text-header: #C2847A;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+  color: inherit;
+  font-size: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.8em;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  height: 88vh;
+  margin: 0 auto;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+
+  color: var(--color-text-header);
+
+}
+
+.notes-title,
+.notes-count {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.notes-list {
+  padding: 0;
+  margin: 16px 0;
+  height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.notes-list-item {
+  border-bottom: 1px solid;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.notes-list-item:hover {
+  background-color: var(--color-hovertest);
+  cursor: pointer;
+}
+
+.notes-list-item h3,
+.notes-list-item p span {
+  font-weight: 600;
+}
+
+.floating-button {
+  font-size: 48px;
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+}
+
+/* NOTE STYLES */
+
+.note textarea {
+  border: none;
+  padding: 16px 12px;
+  width: 100%;
+  height: 70vh;
+  background-color: var(--color-bg);
+}
+
+.note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.note-header h3 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  height: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.note-header h3 svg {
+  fill: var(--color-main);
+  width: 20px;
+  margin-right: 8px;
+}
+
+.note-header button {
+  border: none;
+  outline: none;
+  font-weight: 600;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
